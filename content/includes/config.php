@@ -29,6 +29,7 @@ fclose($handle);
 $_BASE_API      = 'https://www.googleapis.com/youtube/v3/';
 $_SEARCH_API    = $_BASE_API.'search';
 $_VIDEOS_API    = $_BASE_API.'videos';
+$_CHANNELS_API   = $_BASE_API.'channels';
 
 $_API_KEY       = '&key='.$_API_KEY;
 

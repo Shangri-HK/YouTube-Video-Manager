@@ -15,7 +15,7 @@ $parameters = str_replace(' ', '%2B', $parameters);
 $maxResults = 9;
 
 $query = '?part=snippet&q='.$parameters.'&maxResults='.$maxResults;
-echo $query =  $_SEARCH_API.$query.$_API_KEY;
+$query =  $_SEARCH_API.$query.$_API_KEY;
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $query);
@@ -45,7 +45,6 @@ $resp = json_decode($resp);
             if ($result->id->kind == 'youtube#video') {
                 echo '<div class="video" id="f" style="display: none">';
                 echo '<input hidden id="videoId" value="'.$result->id->videoId.'"/>';
-                echo '<input hidden id="videoDesc" value="'.$result->snippet->description.'"/>';
                 echo '<h1 style="position: absolute; line-height:36px; top: -17px; left: 15px; color: #ccc;">'.$result->snippet->title.'</h1>';
                 echo '<img src="'.$result->snippet->thumbnails->high->url.'">';
                 echo '</div>';
