@@ -1,0 +1,58 @@
+
+h1 {
+    color: #CCC;
+}
+
+.navbar {
+    height: 150px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#logo {
+    border-right: 1px solid #ccc;
+    width: 500px;
+    height: 100px;
+    display: inline;
+    float: left;
+}
+
+#search {
+    height: 100px;
+    width: 500px;
+    display: inline;
+    padding-top: 25px;
+    border-right: 1px solid #ccc;
+    float: left;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.search-submit {
+    float: right;
+}
+
+#playlists {
+    height: 100px;
+    width:250px;
+    border-right: 1px solid #ccc;
+    display: inline;
+    float: left;
+}
+
+#browse {
+    height: 100px;
+    width:250px;
+    border-right: 1px solid #ccc;
+    display: inline;
+    float: left;
+}
+
+#stats {
+    height: 100px;
+    width:250px;
+    border-right: 1px solid #ccc;
+    display: inline;
+    float: left;
+}
+

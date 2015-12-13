@@ -7,11 +7,11 @@ The main purpose of this application is to offer a soft and ergonomic interface 
 
 PHP-based application. Using Bootstrap 3 for CSS. All YouTube interactions are made by YouTube API, and cURL. 
 
-# YouTube Developper Key
+# YouTube Developer Key
 
-YouTube provides a Developper Key, which is personnal for each developper. If you want to contribute or even to use this application, you have to obtain your personnal key, with your Google account (Google Developper section). You can obtain a free Developper Key, with a normal YouTube Account. Each Developper Key has a Quota of units. Each request to the Google API costs an amount of units, which is debited directly on your personnal Quota. The price depends of the type of your request, all explained here: https://developers.google.com/youtube/v3/getting-started#quota
+YouTube provides a Developer Key, which is personnal for each Developer. If you want to contribute or even to use this application, you have to obtain your personnal key, with your Google account (Google Developer section). You can obtain a free Developer Key, with a normal YouTube Account. Each Developer Key has a Quota of units. Each request to the Google API costs an amount of units, which is debited directly on your personnal Quota. The price depends of the type of your request, all explained here: https://developers.google.com/youtube/v3/getting-started#quota
 
-You have to paste your Developper Key in the DevelopperKey txt file (path: Root/Developper Key/).
+You have to paste your Developer Key in the DeveloperKey txt file (path: Root/Developer Key/).
 
 # Documentation
 
