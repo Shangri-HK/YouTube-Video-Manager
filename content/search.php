@@ -43,7 +43,9 @@ $resp = json_decode($resp);
         <?php
         foreach ($resp->items as $result) {
             if ($result->id->kind == 'youtube#video') {
-                echo '<div style="display: none">';
+                echo '<div class="video" id="f" style="display: none">';
+                echo '<input hidden id="videoId" value="'.$result->id->videoId.'"/>';
+                echo '<input hidden id="videoDesc" value="'.$result->snippet->description.'"/>';
                 echo '<h1 style="position: absolute; line-height:36px; top: -17px; left: 15px; color: #ccc;">'.$result->snippet->title.'</h1>';
                 echo '<img src="'.$result->snippet->thumbnails->high->url.'">';
                 echo '</div>';
@@ -68,5 +70,9 @@ $resp = json_decode($resp);
     <span data-u="arrowleft" class="jssora03l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
     <span data-u="arrowright" class="jssora03r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
     <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
+</div>
+
+<div class="video-details col-lg-12">
+
 </div>
 

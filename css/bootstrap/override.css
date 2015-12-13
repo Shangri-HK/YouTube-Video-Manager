@@ -1,30 +1,57 @@
 
-h1 {
-    color: #CCC;
+body {
+    background-color: #CCC;
 }
 
-.navbar {
-    height: 150px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+h1 {
+    line-height: 10px;
 }
+
+.nav-bar {
+    height: 150px;
+}
+
+.navbar .fa{
+    color: #777;
+}
+
+.navbar a {
+    color: #777;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+.navbar > div {
+    padding-top: 25px;
+    color: #777;
+}
+
+a {
+    color: #777;
+}
+
 
 #logo {
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #777;
     width: 500px;
     height: 100px;
     display: inline;
     float: left;
+    text-align: center;
 }
 
 #search {
     height: 100px;
     width: 500px;
     display: inline;
-    padding-top: 25px;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #777;
     float: left;
     padding-left: 30px;
+    padding-top: 10px;
     padding-right: 30px;
 }
 
@@ -33,17 +60,19 @@ h1 {
 }
 
 #playlists {
+    text-align: center;
     height: 100px;
     width:250px;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #777;
     display: inline;
     float: left;
 }
 
 #browse {
+    text-align: center;
     height: 100px;
     width:250px;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #777;
     display: inline;
     float: left;
 }
@@ -51,8 +80,38 @@ h1 {
 #stats {
     height: 100px;
     width:250px;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #777;
     display: inline;
     float: left;
+    text-align: center;
+}
+
+.video {
+    cursor: pointer;
+}
+
+.video-details {
+    height: 1500px;
+    background-color: #EEE;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#player {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: black;
+}
+
+#detail {
+    padding-top: 25px;
+}
+
+#description {
+    margin-top: 25px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #CCC;
 }
 

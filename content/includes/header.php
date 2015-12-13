@@ -19,6 +19,7 @@ include_once 'config.php';
     <script type="text/javascript" src="../js/jquery/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/slider/jssor.slider.mini.js"></script>
+    <script type="text/javascript" src="../js/video-actions.js"></script>
     <script>
         jQuery(document).ready(function ($) {
 
