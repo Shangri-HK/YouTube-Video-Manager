@@ -6,7 +6,7 @@
  * Time: 12:41
  */
 
-include_once 'config.php';
+include_once '../../config.php';
 
 ?>
 
@@ -28,7 +28,9 @@ include_once 'config.php';
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div id="logo">
-            <h1>YouTube Video Manager</h1>
+            <a href="<?php echo $_CONTENT.'dashboard.php'; ?>">
+                <h1>YouTube Video Manager</h1>
+            </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div id="search">

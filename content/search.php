@@ -7,7 +7,7 @@
  */
 
 include_once 'includes/header.php';
-include_once 'includes/config.php';
+include_once '../config.php';
 
 $parameters = $_POST['search-query'];
 $parameters = str_replace(' ', '%2B', $parameters);
@@ -32,4 +32,7 @@ foreach ($resp->items as $result) {
     echo 'video ID: '.$result->id->videoId.'<br/>';
 }
 
+?>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YhQh5i_dlhA" frameborder="0" allowfullscreen></iframe>
 
