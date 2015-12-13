@@ -8,11 +8,7 @@
 
 include_once 'content/includes/config.php';
 
-$DeveloperKey = $_DEV_KEY.'Developer_Key.txt';
 
-$handle = fopen($DeveloperKey, 'r');
-$DeveloperKey = fread($handle, 100);
-fclose($handle);
 ?>
 
 <!DOCTYPE html>
