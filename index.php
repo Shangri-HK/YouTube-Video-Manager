@@ -6,7 +6,7 @@
  * Time: 11:52
  */
 
-include_once 'config.php';
+include_once 'content/includes/config.php';
 
 $DeveloperKey = $_DEV_KEY.'Developer_Key.txt';
 

@@ -6,8 +6,8 @@
  * Time: 14:45
  */
 
+include_once 'includes/config.php';
 include_once 'includes/header.php';
-include_once '../config.php';
 
 $parameters = $_POST['search-query'];
 $parameters = str_replace(' ', '%2B', $parameters);
