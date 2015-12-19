@@ -115,6 +115,10 @@ a {
     background-color: #CCC;
 }
 
+#description a {
+    color: #1b6d85;
+}
+
 #actions {
     padding-top: 25px;
 }
@@ -123,3 +127,6 @@ a {
     padding-top: 25px;
 }
 
+#channel a {
+    color: #1b6d85;
+}

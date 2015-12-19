@@ -7,6 +7,7 @@
  */
 
 include_once '../includes/config.php';
+include_once '../includes/func.php';
 
 
 $vid = $_GET['videoId'];
@@ -49,7 +50,7 @@ $channel = json_decode($channel);
 
     </div>
     <div id="iframe col-lg-8">
-<!--        <iframe width="1280" height="720" src="https://www.youtube.com/embed/--><?php //echo $vid ?><!--" frameborder="0" allowfullscreen></iframe>-->
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/<?php echo $vid ?>" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="col-lg-2">
 
@@ -62,11 +63,13 @@ $channel = json_decode($channel);
             <h1>Channel</h1>
             <?php
             foreach ($channel->items as $chan) {
+                $chan_id = $chan->id;
+                $chan_name = $chan->snippet->title;
                 echo "<br />";
                 echo "<img height='250' width='250' src='".$chan->snippet->thumbnails->high->url."' alt='Channel's avatar' style='text-align:center;'/>";
                 echo "<br />";
                 echo "<h2>".$chan->snippet->title."</h2>";
-                echo "<p style='text-align: justify'>".$chan->snippet->description."</p>";
+                echo "<p style='text-align: justify'>".str_replace("\n", "<br />", linksParser($chan->snippet->description))."</p>";
             }
             ?>
         </div>
@@ -75,22 +78,29 @@ $channel = json_decode($channel);
         <h1>Description</h1>
         <div id="description">
             <br>
-            <?php foreach ($resp->items as $items) :?>
-            <p style="text-align: justify"><?php echo $items->snippet->description; ?></p>
-            <?php endforeach; ?>
+            <?php foreach ($resp->items as $items) {
+                $vid_name = $items->snippet->title;
+                echo '<p style="text-align: justify">' .str_replace("\n", "<br />", linksParser($items->snippet->description)). '</p>';
+            } ?>
         </div>
     </div>
     <div class="col-lg-3" id="actions">
         <h1>Actions</h1>
         <br />
         <div class="form-group">
-        <label for="videoURL">video URL</label>
-        <input type="text" class="form-control" id="videoURL" value="http://www.youtube.com/watch?v=<?php echo $vid; ?>">
+            <label for="videoURL">video URL</label>
+            <input type="text" class="form-control" id="videoURL" value="http://www.youtube.com/watch?v=<?php echo $vid; ?>">
             <br />
-            <button class="btn btn-default form-control"><span class="fa fa-star fa-1x">&nbsp;</span>Add to Favorites</button>
+            <button id="add_favs" class="btn btn-default form-control"><span class="fa fa-star fa-1x">&nbsp;</span>Add to Favorites</button>
+            <input hidden type="text" value="<?php echo (isset($vid) && !empty($vid)) ? $vid: 0 ?>" id="videoId">
+            <input hidden type="text" value="<?php echo (isset($vid_name) && !empty($vid_name)) ? $vid_name: 0 ?>" id="videoName">
+            <input hidden type="text" value="<?php echo (isset($chan_id) && !empty($chan_id)) ? $chan_id : 0 ?>" id="channelId">
+            <input hidden type="text" value="<?php echo (isset($chan_name) && !empty($chan_name)) ? $chan_name : 0 ?>" id="channelName">
             <br />
             <br />
             <button class="btn btn-default form-control"><span class="fa fa-plus fa-1x">&nbsp;</span>Add to Playlist</button>
         </div>
+        <div id="alert-disp"></div>
+
     </div>
 </div>
