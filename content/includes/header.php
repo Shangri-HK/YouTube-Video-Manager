@@ -133,7 +133,7 @@ include_once 'config.php';
     <div class="container-fluid">
         <div id="logo">
             <a href="dashboard.php">
-                <h1>YouTube Video Manager</h1>
+                <img src="img/logo.png" width="450" height="100">
             </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->

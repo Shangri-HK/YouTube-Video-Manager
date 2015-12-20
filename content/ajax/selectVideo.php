@@ -9,6 +9,17 @@
 include_once '../includes/config.php';
 include_once '../includes/func.php';
 
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=yvm;charset=utf8', 'root', '');
+    $genres = $bdd->query("SELECT * FROM genres");
+    $genres = $genres->fetchAll();
+}
+catch(Exception $e)
+{
+    echo 'ERROR DB';
+}
+
 
 $vid = $_GET['videoId'];
 $query_video = '?part=snippet&id='.$vid;
@@ -91,7 +102,7 @@ $channel = json_decode($channel);
             <label for="videoURL">video URL</label>
             <input type="text" class="form-control" id="videoURL" value="http://www.youtube.com/watch?v=<?php echo $vid; ?>">
             <br />
-            <button id="add_favs" class="btn btn-default form-control"><span class="fa fa-star fa-1x">&nbsp;</span>Add to Favorites</button>
+            <button class="btn btn-default form-control" data-toggle="modal" data-target="#modalFavs"><span class="fa fa-star fa-1x">&nbsp;</span>Add to Favorites</button>
             <input hidden type="text" value="<?php echo (isset($vid) && !empty($vid)) ? $vid: 0 ?>" id="videoId">
             <input hidden type="text" value="<?php echo (isset($vid_name) && !empty($vid_name)) ? $vid_name: 0 ?>" id="videoName">
             <input hidden type="text" value="<?php echo (isset($chan_id) && !empty($chan_id)) ? $chan_id : 0 ?>" id="channelId">
@@ -101,6 +112,39 @@ $channel = json_decode($channel);
             <button class="btn btn-default form-control"><span class="fa fa-plus fa-1x">&nbsp;</span>Add to Playlist</button>
         </div>
         <div id="alert-disp"></div>
+
+    </div>
+</div>
+
+<div id="modalFavs" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add to Favoritesr</h4>
+            </div>
+            <div class="modal-body">
+                <label for="genre">Pick a gender for this track :</label>
+                <select class="form-control" id="genre">
+                    <?php
+                        foreach ($genres as $genre) {
+                            echo '<option id="genre_opt">'.$genre['genre_name'].'</option>';
+                        }
+                    ?>
+                </select>
+                <br />
+                <div id="tags">
+
+                </div>
+                <button class="btn btn-info form-control" id="submit_new_genre" style="display: none">Add new genre</button>
+                <button id="add_favs" class="btn btn-default form-control" data-toggle="modal" data-target="#modalFavs"><span class="fa fa-star fa-1x">&nbsp;</span>Add to Favorites</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
 
     </div>
 </div>

@@ -32,6 +32,11 @@ $resp = json_decode($resp);
 
 
 ?>
+<style>
+    body {
+        background-color: #000 !important;
+    }
+</style>
 
 <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1920px; height: 360px; overflow: hidden; visibility: hidden; background-color: #000000">
     <!-- Loading Screen -->

@@ -1,6 +1,6 @@
 
 body {
-    background-color: #CCC;
+    background-color: #DDD;
 }
 
 h1 {
@@ -26,7 +26,8 @@ h1 {
 }
 
 .navbar > div {
-    padding-top: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     color: #777;
 }
 
@@ -36,23 +37,23 @@ a {
 
 
 #logo {
-    border-right: 1px solid #777;
     width: 500px;
     height: 100px;
     display: inline;
     float: left;
-    text-align: center;
 }
 
 #search {
     height: 100px;
-    width: 500px;
+    width: 32%;
     display: inline;
-    border-right: 1px solid #777;
+    border: 1px solid #CCC;
     float: left;
     padding-left: 30px;
     padding-top: 10px;
     padding-right: 30px;
+    margin-left:10px;
+    margin-right: 10px;
 }
 
 .search-submit {
@@ -60,30 +61,57 @@ a {
 }
 
 #playlists {
+    background-color: #eee;
     text-align: center;
     height: 100px;
-    width:250px;
-    border-right: 1px solid #777;
+    width: 11%;
+    padding-top: 20px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
     display: inline;
     float: left;
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+#playlists:hover {
+    background-color: #ddd;
 }
 
 #browse {
+    background-color: #eee;
     text-align: center;
     height: 100px;
-    width:250px;
-    border-right: 1px solid #777;
+    width: 11%;
+    padding-top: 20px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
     display: inline;
     float: left;
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+#browse:hover {
+    background-color: #ddd;
 }
 
 #stats {
+    background-color: #eee;
     height: 100px;
-    width:250px;
-    border-right: 1px solid #777;
+    width: 11%;
+    padding-top: 20px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
     display: inline;
     float: left;
     text-align: center;
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+#stats:hover {
+    background-color: #ddd;
 }
 
 .video {
@@ -129,4 +157,108 @@ a {
 
 #channel a {
     color: #1b6d85;
+}
+
+/* */
+.icon-track {
+    text-align: center;
+    display: inline;
+    float: left;
+    width: 270px;
+    height: 300px;
+    padding-top: 15px;
+    margin: 5px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.icon-track:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.icons-viewer {
+    background-color: #fafafa;
+    height: 1200px;
+    overflow: auto;
+    border-bottom: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+}
+
+#favs > .container > ul > .active > a {
+    background-color: #fafafa;
+}
+
+#favs > .container > ul > li > a {
+    background-color: #eee;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+}
+
+#favs > .container > ul > li > a:active,
+#favs > .container > ul > li > a:focus {
+    outline: 0 none;
+}
+
+.latest-content {
+    background-color: #fafafa;
+    padding: 20px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    width: 110%;
+    list-style-type: none;
+}
+
+.latest-item {
+    margin-bottom: 10px;
+}
+
+.most_rated {
+    margin-left: -1.5%;
+}
+
+.most_rated-content {
+    background-color: #fafafa;
+    padding: 20px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    width: 110%;
+    list-style-type: none;
+}
+
+.player-browse {
+    padding: 10px;
+    background-color: #fafafa;
+    border: 1px solid #CCC;
+    height: 300px;
+    display: inline;
+}
+
+.filters {
+    background-color: #eee;
+    border: 1px solid #CCC;
+    height: 100px;
+    padding: 15px;
+    overflow: auto;
+}
+
+.tag-filter {
+    outline: 0 none;
+    margin-right: 5px;
+}
+.tag-filter:active,
+.tag-filter:focus {
+    outline: 0 none;
+}
+
+#tag {
+    outline: 0 none;
+    margin-right: 5px;
+}
+#tag:active,
+#tag:focus {
+    outline: 0 none;
 }
